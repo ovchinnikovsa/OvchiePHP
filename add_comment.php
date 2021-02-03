@@ -23,21 +23,20 @@ require 'db.php';
             $commentText = htmlspecialchars($commentText);
             $commentText = trim($commentText);
 
-            echo 'articlid:' . $_POST['article_id'];
-            echo 'commentText:' . $commentText;
-            echo 'authorNames:' . $authorName;
 
             
             if (isset($_POST['addCommentButton'])) {
                 if (strlen($authorName) < 50 && strlen(commentText) < 500) {
-                    $query = ("INSERT INTO comments VALUES (NULL, :name, :text, NOW(), :article_id");
-                    $comm = $pdo->prepare($query);
-                    $comm->execute(['name' => $authorName, 'text' => $commentText, 'article_id' => $_POST['article_id']]);
-                    echo "\nPDOStatement::errorInfo():\n";
-                    $arr = $comm->errorInfo();
-                    print_r($arr);
-                    /* array_shift ($pdo->errorInfo());
-                    print_r($pdo->errorInfo()); */
+
+                    $comm = $pdo->prepare("
+                    INSERT INTO comments (id, name, text, date, article_id) VALUES (NULL,:name,:text,NOW(),:article_id)
+                    ");
+                    $comm->bindParam(':name', $authorName);
+                    $comm->bindParam(':text', $commentText);
+                    $comm->bindParam(':article_id', $_POST['article_id']);
+                    $comm->execute();
+                    header("HTTP/1.1 301 Moved Permanently");
+                    header("Location: http://simpleblog/indexSingle.php?id=" . $_POST['article_id']);
                 }else {
                     echo '<div class="form-text reg-errors">Вы превысили лимит по символам!</div>';
                 }
