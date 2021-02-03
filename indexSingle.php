@@ -4,16 +4,10 @@ $articleId = intval($_GET['id']);
 $query = ("SELECT * FROM articles WHERE $articleId = id");
 $article = $pdo->query($query);
 $single = $article->fetch();
-echo "\nPDOStatement::errorInfo():\n";
-$arr = $article->errorInfo();
-print_r($arr);
 
 $query = ("SELECT * FROM comments WHERE article_id = $articleId");
 $commentObject = $pdo->query($query);
 $comment = $commentObject->fetchAll();
-echo "\nPDOStatement::errorInfo():\n";
-$arr = $commentObject->errorInfo();
-print_r($arr);
 
 ?>
 
