@@ -1,0 +1,111 @@
+/* HEADER */
+
+.btn-outline-light a{
+    font: 200 20px 'Arial', sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-outline-light a:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* BLOG */
+
+.over{
+    margin: 0;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.blog{
+    box-shadow: 7px 3px 5px rgba(119, 119, 119, 0.603);
+    border: 1px solid rgb(46, 46, 46);
+    margin: 2% auto;
+}
+
+.blog a{
+    color: black;
+}
+
+/* REGISTRATION */
+
+.reg-log{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7px 10px 5px rgba(119, 119, 119, 0.603);
+    padding: 2%;
+    border-top: 1px solid rgb(46, 46, 46);
+    border-left: 1px solid rgb(46, 46, 46);
+    margin: 7.3% auto;
+    width: 30%;
+    height: 500px;
+}
+
+.single p{
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 1% auto;
+    padding: 1% 1%;
+}
+
+#authorized{
+    margin: 0 auto;
+    font: 200 20px 'Arial', sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;;
+}
+
+.reg-errors{
+    color: red;
+    margin: 5% auto;
+    font: 200 15px 'Arial', sans-serif;
+    opacity: 0.7;
+}
+
+.reg-sucsess{
+    color: green;
+    margin: 5% auto;
+    font: 200 15px 'Arial', sans-serif;
+    opacity: 0.7;
+}
+
+/* COMMENT BLOCK */
+
+.comment-block{
+    margin: 2% 0;
+    padding: 0 1%;
+    border-left: 1px solid rgb(0, 0, 0);
+    
+}
+
+.comment-block .comment-header{
+    margin: 1% 0;
+    width: 20%;
+    vertical-align: middle;
+}
+
+.comment-author-name{
+    font: 900 25px 'Arial', sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;
+}
+
+.comment-date{
+    font: 900 15px 'Arial', sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;
+    
+    vertical-align: middle;
+    opacity: 0.3;
+}
+
