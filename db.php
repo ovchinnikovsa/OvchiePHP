@@ -2,7 +2,7 @@
 
 $dbname = 'simpleblogdb';
 $username = 'root';
-$password = 'root';
+$password = '';
 $hostname = 'localhost';
 
 try{

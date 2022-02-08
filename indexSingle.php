@@ -27,7 +27,8 @@ print_r($arr);
 
 
 <!-- COMMENT INPUT -->
-<?php if (isset($_SESSION['email'])) { ?>
+<?php if (isset($_SESSION['email']))
+{ ?>
 <form action="add_comment.php" method="POST" name="addCommentForm">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Ваше имя</label>
@@ -44,18 +45,21 @@ print_r($arr);
     </form>
 
 <?php
-    }else{
-        echo '<div id="authorized">
+}
+else
+{
+    echo '<div id="authorized">
                 <h1>Чтобы оставлять комментарии, вы должны войти или зарегестрироваться!</h1>
                 <a href="logIn.php">Войти</a>
                 <a href="registration.php">Зарегистрироваться</a>
              </div>';
-    }
+}
 ?>
 
 <!-- COMMENT BLOCK -->
 
-<?php foreach ($comment as  $commentBlock) { ?>
+<?php foreach ($comment as $commentBlock)
+{ ?>
 
     <div class="comment-block">
         <div class="comment-header">
@@ -65,4 +69,5 @@ print_r($arr);
         <p class="comment-text"><?php echo $commentBlock['text']; ?></p>
     </div>
 
-<?php } ?>
+<?php
+}?>
