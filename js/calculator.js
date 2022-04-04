@@ -1,0 +1,1 @@
+!function(){var l=document.querySelector(".js-salary"),c={1:50,2:100,3:200},n={levelSelect:3,qtySelect:7};l&&(l.innerText=c[n.levelSelect]*n.qtySelect*4+" $",CustomSelect.addF(function(e,t){n[e]=t,l.innerText=c[n.levelSelect]*n.qtySelect*4+" $"}))}();
