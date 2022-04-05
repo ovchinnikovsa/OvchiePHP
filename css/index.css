@@ -200,6 +200,7 @@ body::-webkit-scrollbar-thumb:active {
     .lines__stroke {
         margin-bottom: 350px
     }
+
     .lines__stroke_mobile {
         background-image: none
     }
@@ -481,6 +482,7 @@ body::-webkit-scrollbar-thumb:active {
         display: inline-block;
         max-width: 210px
     }
+
     .section-4-cards__item:nth-child(2n) {
         margin-right: 0
     }
@@ -510,9 +512,11 @@ body::-webkit-scrollbar-thumb:active {
         padding-bottom: 50px;
         text-align: center
     }
+
     .section-4-cards__item:nth-child(2n) {
         margin-right: 4%
     }
+
     .section-4-cards__item:last-child {
         margin-right: 0
     }
@@ -548,6 +552,7 @@ body::-webkit-scrollbar-thumb:active {
         width: 70px;
         height: 70px
     }
+
     .section-4-cards__icon {
         vertical-align: middle;
         width: 90px;
@@ -725,6 +730,7 @@ body::-webkit-scrollbar-thumb:active {
     .button:hover {
         background-position-x: 223px
     }
+
     .button {
         max-width: 241px;
         height: 65px
@@ -1283,6 +1289,7 @@ body::-webkit-scrollbar-thumb:active {
         margin-top: 35px;
         font-size: 18px
     }
+
     .main .section__title-text.middle {
         max-width: 360px
     }
@@ -2142,10 +2149,12 @@ body::-webkit-scrollbar-thumb:active {
         transition: .5s;
         z-index: 10
     }
+
     .header__nav_open {
         -webkit-transform: translateY(0);
         transform: translateY(0)
     }
+
     .header__nav::after {
         content: '';
         position: absolute;
@@ -2180,6 +2189,7 @@ body::-webkit-scrollbar-thumb:active {
         transition: .3s;
         cursor: pointer
     }
+
     .header__close:focus,
     .header__close:hover {
         -webkit-transform: rotate(30deg);
@@ -2478,6 +2488,7 @@ body::-webkit-scrollbar-thumb:active {
         max-width: 335px;
         text-align: right
     }
+
     .footer__social-link {
         margin-bottom: 15px
     }
@@ -2499,6 +2510,7 @@ body::-webkit-scrollbar-thumb:active {
         display: block;
         text-align: center
     }
+
     .footer__social-link {
         margin-bottom: 15px
     }
@@ -3143,7 +3155,7 @@ body::-webkit-scrollbar-thumb:active {
     display: none;
     position: fixed;
     right: 5px;
-    bottom: 15%;
+    bottom: 4%;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -3777,6 +3789,7 @@ body::-webkit-scrollbar-thumb:active {
     .calculator__form__line:first-child {
         max-width: 600px
     }
+
     .calculator__form__line:last-child {
         max-width: 440px
     }
@@ -4155,6 +4168,7 @@ body::-webkit-scrollbar-thumb:active {
         padding-top: 100px;
         padding-bottom: 100px
     }
+
     .you-need-before-work__title-container {
         display: -webkit-box;
         display: -ms-flexbox;
