@@ -1,0 +1,31 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+
+Header always unset content-security-policy-report-only
+
+RewriteEngine On
+#RewriteCond %{SERVER_PORT} !^443$
+#RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+RedirectMatch 403 /\..*$
+RewriteCond %{REQUEST_URI} !assets(.*)
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule . index.php [L]
+
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store"
+</IfModule>
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "now"
+</IfModule>
