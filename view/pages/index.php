@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#1b044d">
     <meta name="description"
-        content="Работа вебкам моделью Grand Models - это высокий заработок на дому, ежедневные выплаты, обучение работе от опытных вебкам моделей, техническая поддержка 24/7! Начать работу вебкам моделью вместе с нами просто и комфортно!">
+        content="Работа вебкам моделью FreeLifeStudio - это высокий заработок на дому, ежедневные выплаты, обучение работе от опытных вебкам моделей, техническая поддержка 24/7! Начать работу вебкам моделью вместе с нами просто и комфортно!">
     <meta name="keywords"
         content="Работа вебкам моделью, Начать работу вебкам моделью, работа вебкам моделью на дому, стать вебкам моделью, онлайн вебкам студия, Помощь вебкам моделям, продвижение вебкам моделей, ежедневные выплаты для вебкам моделей, начинающая вебкам модель, вакансия вебкам модели, вакансиля вебкам модели на дому">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Grand Models - работа вебкам моделью на дому">
+    <meta property="og:title" content="FreeLifeStudio - работа вебкам моделью на дому">
     <meta property="og:description"
-        content="Работа вебкам моделью Grand Models - это высокий заработок на дому, ежедневные выплаты, обучение работе от опытных вебкам моделей, техническая поддержка 24/7! Начать работу вебкам моделью вместе с нами просто и комфортно!">
+        content="Работа вебкам моделью FreeLifeStudio - это высокий заработок на дому, ежедневные выплаты, обучение работе от опытных вебкам моделей, техническая поддержка 24/7! Начать работу вебкам моделью вместе с нами просто и комфортно!">
     <!-- <meta property="og:url" content="https://grandmodels.online/"> -->
     <meta property="og:image" content="/view/assets/images/img/bg_main.png">
-    <title>Grand Models - работа вебкам моделью на дому</title>
+    <title>FreeLifeStudio - работа вебкам моделью на дому</title>
     <link rel="icon" href="/view/assets/images/img/icon.png">
     <link rel="stylesheet" href="/view/assets/css/index.css">
     <script async="" src="/view/assets/js/tag.js"></script>
@@ -24,13 +24,13 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <!-- <header class="header">
             <div class="header__content">
                 <a href="/" class="js-focusableLogo">
-                    LOGO
+                    FreeLifeStudio
                 </a>
             </div>
-        </header>
+        </header> -->
         <div class="header__overlay js-headerOverlay"></div>
         <main>
             <section class="main">
@@ -581,8 +581,8 @@
                 </div>
             </section>
 
-            <div class="modal js-modalOverlay" data-type="sign-up">
-                <div class="modal__content js-modalWindow"><svg xmlns="https://www.w3.org/2000/svg" height="24px"
+            <div class="modal js-modalOverlay <?php echo session('show_modal') ? 'modal_open' : ''; ?>" data-type="sign-up">
+                <div class="modal__content js-modalWindow <?php echo session('show_modal') ? 'modal__content_open' : ''; ?>"><svg xmlns="https://www.w3.org/2000/svg" height="24px"
                         aria-label="close icon" class="modal__close js-modalClose" viewBox="0 0 24 24" width="24px"
                         fill="#FF0084">
                         <path d="M0 0h24v24H0z" fill="none"></path>
@@ -593,7 +593,10 @@
                     <h4 class="modal__title">Регистрация</h4>
                     <p class="modal__sub-title">Всего несколько полей, и ты уже на пол пути к высокому доходу!</p>
                     <form class="modal__form" method="post" action="/handlers/send-form.php">
-                        <div class="modal__input"><input type="text" id="input-name" name="name" placeholder="Ваше имя"
+                        <?php echo cfrs_set(); ?>
+                        <?php echo show_message(); ?>
+                        <div class="modal__input">
+                            <input type="text" id="input-name" name="name" placeholder="Ваше имя"
                                 required="">
                             <label class="modal__label" for="input-name"><span class="modal__label-border"><svg
                                         width="14" height="15" aria-label="name icon" viewBox="0 0 14 15" fill="none"
@@ -601,6 +604,15 @@
                                         <path
                                             d="M9.02344 6.52344C8.3724 7.17448 7.57812 7.5 6.64062 7.5C5.72917 7.5 4.94792 7.17448 4.29688 6.52344C3.64583 5.8724 3.32031 5.09115 3.32031 4.17969C3.32031 3.24219 3.64583 2.44792 4.29688 1.79688C4.94792 1.14583 5.72917 0.820312 6.64062 0.820312C7.57812 0.820312 8.3724 1.14583 9.02344 1.79688C9.67448 2.44792 10 3.24219 10 4.17969C10 5.09115 9.67448 5.8724 9.02344 6.52344ZM3.94531 9.53125C4.9349 9.29688 5.83333 9.17969 6.64062 9.17969C7.47396 9.17969 8.38542 9.29688 9.375 9.53125C10.3646 9.76562 11.263 10.1562 12.0703 10.7031C12.9036 11.224 13.3203 11.8229 13.3203 12.5V14.1797H0V12.5C0 11.8229 0.403646 11.224 1.21094 10.7031C2.04427 10.1562 2.95573 9.76562 3.94531 9.53125Z"
                                             fill="#FFFFFF"></path>
+                                    </svg></span></label>
+                        </div>
+                        <div class="modal__input">
+                            <input type="text" id="input-telegram" name="telegram" placeholder="Ваш логин телеграм"
+                                required="">
+                            <label class="modal__label" for="input-telegram"><span class="modal__label-border"><svg
+                                        width="21" height="18" aria-label="telegram icon" viewBox="0 0 21 18" fill="none"
+                                        xmlns="https://www.w3.org/2000/svg">
+                                        <path d="M20.5888 0.327652C20.2525 0.0238033 19.7726 -0.081531 19.3338 0.0602651L0.868517 6.07647C0.368126 6.23852 0.0235951 6.68012 -0.00101432 7.20679C-0.0256237 7.72941 0.269689 8.20341 0.757775 8.41408L5.32281 10.3871C5.34332 10.4884 6.65582 16.4965 6.70094 16.699C6.75836 16.9624 6.89371 17.1933 7.17672 17.2662C7.46383 17.3391 7.66891 17.1811 7.88629 17.0231C8.00524 16.934 11.2742 14.5154 11.2742 14.5154L15.2363 17.7159C15.466 17.9023 15.749 17.9995 16.0361 17.9995C16.1714 17.9995 16.3109 17.9792 16.4463 17.9306C16.8646 17.7929 17.1722 17.4566 17.2748 17.0312L20.9662 1.53494C21.0687 1.0974 20.9252 0.635552 20.5888 0.327652ZM8.1816 11.5133C8.1775 11.5174 8.1775 11.5255 8.1734 11.5336L7.41051 14.171L6.56149 10.2655L12.4226 7.04879L8.32516 11.2784C8.25953 11.3472 8.21031 11.4283 8.1816 11.5133ZM8.4277 15.1028L8.77633 13.9036L9.10856 12.7571L10.298 13.7173L8.4277 15.1028ZM19.7644 1.25946L16.073 16.7557C16.073 16.7638 16.0689 16.776 16.0525 16.7801C16.0361 16.7841 16.0279 16.7801 16.0197 16.776L11.6843 13.2716L9.67457 11.647L16.1304 4.98262C16.3396 4.76384 16.3601 4.42759 16.1714 4.18856C15.9869 3.94953 15.6506 3.88066 15.3839 4.0265L5.82731 9.26891L1.25406 7.29592C1.24176 7.29187 1.23356 7.28782 1.23356 7.26351C1.23356 7.2392 1.24176 7.2392 1.25817 7.2311L19.7193 1.21894C19.7275 1.21489 19.7398 1.21084 19.7521 1.22704C19.7685 1.2392 19.7685 1.25135 19.7644 1.25946Z" fill="white"></path></g><defs><clipPath id="clip01">
                                     </svg></span></label>
                         </div>
                         <div class="modal__input"><input type="tel" id="input-phone" name="phone"
@@ -612,45 +624,19 @@
                                             d="M3.00781 6.48438C4.23177 8.90625 6.06771 10.7422 8.51562 11.9922L10.3516 10.1562C10.5859 9.89583 10.8724 9.83073 11.2109 9.96094C12.1484 10.2734 13.138 10.4297 14.1797 10.4297C14.388 10.4297 14.5703 10.5078 14.7266 10.6641C14.9089 10.8203 15 11.0156 15 11.25V14.1797C15 14.388 14.9089 14.5833 14.7266 14.7656C14.5703 14.9219 14.388 15 14.1797 15C11.6016 15 9.21875 14.375 7.03125 13.125C4.86979 11.849 3.15104 10.1302 1.875 7.96875C0.625 5.78125 0 3.39844 0 0.820312C0 0.611979 0.078125 0.429688 0.234375 0.273438C0.416667 0.0911458 0.611979 0 0.820312 0H3.75C3.98438 0 4.17969 0.0911458 4.33594 0.273438C4.49219 0.429688 4.57031 0.611979 4.57031 0.820312C4.57031 1.86198 4.72656 2.85156 5.03906 3.78906C5.14323 4.1276 5.07812 4.41406 4.84375 4.64844L3.00781 6.48438Z"
                                             fill="#FFFFFF"></path>
                                     </svg></span></label></div>
-                        <div class="modal__input"><input type="email" id="input-email" name="email"
-                                placeholder="Ваш e-mail" required=""> <label class="modal__label"
-                                for="input-email"><span class="modal__label-border"><svg width="17" height="15"
-                                        aria-label="email icon" viewBox="0 0 17 15" fill="none"
-                                        xmlns="https://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15 0.820312C15.4688 0.820312 15.8594 0.989583 16.1719 1.32812C16.5104 1.64062 16.6797 2.03125 16.6797 2.5V12.5C16.6797 12.9688 16.5104 13.3724 16.1719 13.7109C15.8594 14.0234 15.4688 14.1797 15 14.1797H1.67969C1.21094 14.1797 0.807292 14.0234 0.46875 13.7109C0.15625 13.3724 0 12.9688 0 12.5V2.5C0 2.03125 0.15625 1.64062 0.46875 1.32812C0.807292 0.989583 1.21094 0.820312 1.67969 0.820312H15ZM15 4.17969V2.5L8.32031 6.67969L1.67969 2.5V4.17969L8.32031 8.32031L15 4.17969Z"
-                                            fill="#FFFFFF"></path>
-                                    </svg></span></label></div>
-                        <div class="modal__input"><input type="password" id="input-password" name="password"
-                                placeholder="Ваш пароль" required=""> <label class="modal__label"
-                                for="input-password"><span class="modal__label-border"><svg width="14" height="18"
-                                        aria-label="password icon" viewBox="0 0 14 18" fill="none"
-                                        xmlns="https://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.6797 6.17969C12.1224 6.17969 12.5 6.34896 12.8125 6.6875C13.151 7 13.3203 7.3776 13.3203 7.82031V16.1797C13.3203 16.6224 13.151 17 12.8125 17.3125C12.5 17.651 12.1224 17.8203 11.6797 17.8203H1.67969C1.21094 17.8203 0.807292 17.651 0.46875 17.3125C0.15625 17 0 16.6224 0 16.1797V7.82031C0 7.3776 0.15625 7 0.46875 6.6875C0.807292 6.34896 1.21094 6.17969 1.67969 6.17969H2.5V4.5C2.5 3.35417 2.90365 2.3776 3.71094 1.57031C4.54427 0.736979 5.53385 0.320312 6.67969 0.320312C7.82552 0.320312 8.80208 0.736979 9.60938 1.57031C10.4167 2.3776 10.8203 3.35417 10.8203 4.5V6.17969H11.6797ZM5.46875 13.2109C5.80729 13.5234 6.19792 13.6797 6.64062 13.6797C7.10938 13.6797 7.5 13.5234 7.8125 13.2109C8.15104 12.8724 8.32031 12.4688 8.32031 12C8.32031 11.5312 8.15104 11.1406 7.8125 10.8281C7.5 10.4896 7.10938 10.3203 6.64062 10.3203C6.19792 10.3203 5.80729 10.4896 5.46875 10.8281C5.15625 11.1406 5 11.5312 5 12C5 12.4688 5.15625 12.8724 5.46875 13.2109ZM9.25781 6.17969V4.5C9.25781 3.79688 8.9974 3.19792 8.47656 2.70312C7.98177 2.18229 7.36979 1.92188 6.64062 1.92188C5.9375 1.92188 5.33854 2.18229 4.84375 2.70312C4.34896 3.19792 4.10156 3.79688 4.10156 4.5V6.17969H9.25781Z"
-                                            fill="#FFFFFF"></path>
-                                    </svg></span></label></div>
-                        <div class="modal__input"><input type="password" id="input-check_password" name="check_password"
-                                placeholder="Повторите пароль" required=""> <label class="modal__label"
-                                for="input-check_password">
-                                <span class="modal__label-border">
-                                    <svg width="14" height="18" aria-label="password icon" viewBox="0 0 14 18"
-                                        fill="none" xmlns="https://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.6797 6.17969C12.1224 6.17969 12.5 6.34896 12.8125 6.6875C13.151 7 13.3203 7.3776 13.3203 7.82031V16.1797C13.3203 16.6224 13.151 17 12.8125 17.3125C12.5 17.651 12.1224 17.8203 11.6797 17.8203H1.67969C1.21094 17.8203 0.807292 17.651 0.46875 17.3125C0.15625 17 0 16.6224 0 16.1797V7.82031C0 7.3776 0.15625 7 0.46875 6.6875C0.807292 6.34896 1.21094 6.17969 1.67969 6.17969H2.5V4.5C2.5 3.35417 2.90365 2.3776 3.71094 1.57031C4.54427 0.736979 5.53385 0.320312 6.67969 0.320312C7.82552 0.320312 8.80208 0.736979 9.60938 1.57031C10.4167 2.3776 10.8203 3.35417 10.8203 4.5V6.17969H11.6797ZM5.46875 13.2109C5.80729 13.5234 6.19792 13.6797 6.64062 13.6797C7.10938 13.6797 7.5 13.5234 7.8125 13.2109C8.15104 12.8724 8.32031 12.4688 8.32031 12C8.32031 11.5312 8.15104 11.1406 7.8125 10.8281C7.5 10.4896 7.10938 10.3203 6.64062 10.3203C6.19792 10.3203 5.80729 10.4896 5.46875 10.8281C5.15625 11.1406 5 11.5312 5 12C5 12.4688 5.15625 12.8724 5.46875 13.2109ZM9.25781 6.17969V4.5C9.25781 3.79688 8.9974 3.19792 8.47656 2.70312C7.98177 2.18229 7.36979 1.92188 6.64062 1.92188C5.9375 1.92188 5.33854 2.18229 4.84375 2.70312C4.34896 3.19792 4.10156 3.79688 4.10156 4.5V6.17969H9.25781Z"
-                                            fill="#FFFFFF"></path>
-                                    </svg>
-                                </span></label></div>
-                        <div class="modal__input modal__input_checkbox"><input type="checkbox"
+                        
+                        <div class="modal__input modal__input_checkbox">
+                            <input type="checkbox"
                                 class="js-privacyPolicyInput" id="input-privacy_policy" name="privacy_policy"
-                                required=""> <label class="modal__mark-label" for="input-privacy_policy"></label>
+                                value="true"> 
+                                <label class="modal__mark-label" for="input-privacy_policy"></label>
                             <p class="modal__text-container js-privacyPolicyP"><span
                                     class="modal__text-container__text">Даю согласие
                                     на обработку персональных данных</span>
                                 </p>
                         </div>
                         <button class="modal__button modal__button_fill"
-                            data-text="Зарегистрироваться">Зарегистрироваться</button>
+                            data-text="Отправить заявку">Отправить заявку</button>
                     </form>
                 </div>
             </div>
@@ -660,7 +646,9 @@
         </main>
         <footer class="footer">
             <div class="footer__content">
-                <div class="footer__line_logo-social"><a href="/"><svg width="261" height="53"
+                <div class="footer__line_logo-social">
+                    <!-- <a href="/">
+                        <svg width="261" height="53"
                             aria-label="site logo" class="footer__logo" viewBox="0 0 261 53" fill="none"
                             xmlns="https://www.w3.org/2000/svg">
                             <g class="logo-crystal" clip-path="url(#clip013505)">
@@ -879,7 +867,7 @@
                                     <path fill="#fff" d="M0 0h261v52.718H0z"></path>
                                 </clippath>
                             </defs>
-                        </svg></a>
+                        </svg></a> -->
                     <div class="footer__line">
                         <p class="text footer__text">Для лиц старше 18-ти лет. Все права на любые материалы,
                             опубликованные на сайте, защищены в соответствии с российским и международным
@@ -892,7 +880,7 @@
                                 href="https://www.dmca.com/Protection/Status.aspx?ID=8c97c871-687c-4d27-bbcb-020d55f03943&amp;refurl=https://grandmodels.online/?login"
                                 title="DMCA.com Protection Status"><img src="/view/assets/images/svg/dmca-protected.svg"
                                     alt="dmca logo"></a>
-                            <p class="footer__copyright">© 2021 Grand Models. Все права защищены</p>
+                            <p class="footer__copyright">© <?php echo date('Y', time()); ?> FreeLifeStudio. Все права защищены</p>
                     </div>
                     </div>
                 </div>

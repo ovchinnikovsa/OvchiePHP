@@ -4611,3 +4611,25 @@ body::-webkit-scrollbar-thumb:active {
         background-position-x: 50%
     }
 }
+
+.error-message {
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #bf1d35 20%, #ff6bdf 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.succsess-message {
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #12bc6d 20%, #00e1e1 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
