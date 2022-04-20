@@ -108,3 +108,39 @@ function db_insert_model($name, $telegram, $phone)
     VALUES (' . escape_db($name) . ', ' . escape_db($telegram) . ', ' . escape_db($phone) . ')';
     return db_query($sql);
 }
+
+function get_last_inserted_id(){
+    global $mysqli;
+    return mysqli_insert_id($mysqli);
+}
+
+function send_telegram_message_to_user_id(string $message, string  $userId = '320047103'): bool {
+    try {
+        $botKey = '5303881636:AAFejnkQe440Bc68UhiqSJiftP_4_mD79BM';
+        
+        $requestFactory = new Http\Factory\Guzzle\RequestFactory();
+        $streamFactory = new Http\Factory\Guzzle\StreamFactory();
+        $client = new Http\Adapter\Guzzle6\Client();
+        $apiClient = new \TgBotApi\BotApiBase\ApiClient($requestFactory, $streamFactory, $client);
+        $bot = new \TgBotApi\BotApiBase\BotApi($botKey, $apiClient, new \TgBotApi\BotApiBase\BotApiNormalizer());
+        
+        $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, $message));
+
+        return true;
+    } catch (\Throwable $th) {
+        return false;
+    }
+}
+
+function send_notification_new_model(string $name, string $telegram, string $phone):bool {
+    $model_id = get_last_inserted_id();
+
+    $message = 'Новая модель
+
+ID: ' . $model_id . '
+Имя: ' . $name . '
+Telegram: ' . $telegram . '
+Телефон: ' . $phone;
+
+    return send_telegram_message_to_user_id($message);
+}

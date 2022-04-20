@@ -32,4 +32,9 @@
         set_message('Создание заявки не удалось');
     }
 
+    $res = send_notification_new_model($name, $telegram, $phone);
+    if (!$res) {
+        set_message('Отправка заявки не удалась');
+    }
+
     set_message('Ваша заявка отправлена. Мы свяжемся с вами как можно скорее!', false);
