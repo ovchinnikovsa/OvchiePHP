@@ -144,3 +144,9 @@ Telegram: ' . $telegram . '
 
     return send_telegram_message_to_user_id($message);
 }
+
+function cut_get_query(string $str): string
+{
+    $get_query = strstr($str, '?') ?: '';
+    return str_replace($get_query, '', $str);
+}
