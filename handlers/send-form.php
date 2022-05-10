@@ -17,7 +17,7 @@
     }
     $phone = post('phone');
 
-    if (!preg_match('/^[а-яё]{5,30}$/iu', post('name'))){
+    if (!preg_match('/^[а-яё]{2,30}$/iu', post('name'))){
         set_message('Введите корректное имя на русском');
     }
     $name = post('name');
