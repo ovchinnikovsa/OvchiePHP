@@ -21,6 +21,24 @@
     <link rel="icon" href="/view/assets/images/img/icon.png">
     <link rel="stylesheet" href="/view/assets/css/index.css">
     <script async="" src="/view/assets/js/tag.js"></script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N7H2KQF');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -47,22 +65,23 @@
                         <li class="section-4-cards__item">
                             <div class="section-4-cards__icon"><img class="section-4-cards__image"
                                     src="/view/assets/images/svg/icon-home.svg" alt="home icon"></div>
-                            <p class="section-4-cards__text">Предоставляем всю технику и проживание в отдельной квартире</p>
+                            <p class="section-4-cards__text">Предоставляем всю технику и проживание в отдельной квартире
+                            </p>
                         </li>
                         <li class="section-4-cards__item">
                             <div class="section-4-cards__icon"><img class="section-4-cards__image"
                                     src="/view/assets/images/svg/icon-laptop.svg" alt="computer icon"></div>
-                                    <p class="section-4-cards__text">Работа из дома со свободным графиком</p>
+                            <p class="section-4-cards__text">Работа из дома со свободным графиком</p>
                         </li>
                         <li class="section-4-cards__item">
                             <div class="section-4-cards__icon"><img class="section-4-cards__image"
                                     src="/view/assets/images/svg/icon-cash-up.svg" alt="cash icon"></div>
-                                    <p class="section-4-cards__text">Бесплатное обучение работе</p>
+                            <p class="section-4-cards__text">Бесплатное обучение работе</p>
                         </li>
                         <li class="section-4-cards__item">
                             <div class="section-4-cards__icon"><img class="section-4-cards__image"
                                     src="/view/assets/images/svg/icon-card.svg" alt="card icon"></div>
-                                    <p class="section-4-cards__text">Нет ограничений по заработку</p>
+                            <p class="section-4-cards__text">Нет ограничений по заработку</p>
                         </li>
                     </ul>
                 </div>
@@ -238,8 +257,10 @@
                                 Развивай свою харизм и иностранные языки
                             </h5>
                             <p class="text-list__text">
-                                Мы поможем тебе раскрыть все твои особенности в лучшем свете, ты еще больше полюбишь себя,
-                                а мужчины будут восхищаться тобой! Постоянное общение с иностранцами так же будет способствовать
+                                Мы поможем тебе раскрыть все твои особенности в лучшем свете, ты еще больше полюбишь
+                                себя,
+                                а мужчины будут восхищаться тобой! Постоянное общение с иностранцами так же будет
+                                способствовать
                                 улучшению иностранного языка.
                             </p>
                         </li>
@@ -247,7 +268,8 @@
                             <h5 class="text-list__title"><span class="text-list__number">03.</span> Работай удаленно из
                                 дома</h5>
                             <p class="text-list__text">Больше никаких поездок на работу в час-пик, нервных начальников
-                                и работы с 8 до 5. Мы согласовываем удобный для тебя график и ты работаешь прямо из дома!
+                                и работы с 8 до 5. Мы согласовываем удобный для тебя график и ты работаешь прямо из
+                                дома!
                             </p>
                         </li>
                         <li class="text-list__item">
@@ -348,7 +370,8 @@
                             </div>
                             <div>
                                 <h3 class="number-title-text__title">Стабильные выплаты</h3>
-                                <p class="number-title-text__text">Стабильные выплаты наличными или на карту раз в две недели.</p>
+                                <p class="number-title-text__text">Стабильные выплаты наличными или на карту раз в две
+                                    недели.</p>
                             </div>
                         </li>
                         <li class="number-title-text__item">
@@ -488,7 +511,7 @@
                             </div>
                         </div>
                         <button class="button js-btnToModal" data-type="sign-up" data-text="стать моделью">стать
-                        моделью</button>
+                            моделью</button>
                     </div>
                     <div class="you-protected__list-content">
                         <ul class="section-2-cards">
@@ -548,7 +571,8 @@
                         <li class="section-3-cards__item">
                             <div class="section-3-cards__icon"><img class="section-3-cards__image"
                                     src="/view/assets/images/svg/icon-camera.svg" alt="camera icon"></div>
-                            <p class="section-3-cards__text">Нужно лишь оставить заявку на сайте и мы свяжемся с Вами</p>
+                            <p class="section-3-cards__text">Нужно лишь оставить заявку на сайте и мы свяжемся с Вами
+                            </p>
                         </li>
                         <li class="section-3-cards__item">
                             <div class="section-3-cards__icon"><img class="section-3-cards__image"
@@ -582,10 +606,12 @@
                 </div>
             </section>
 
-            <div class="modal js-modalOverlay <?php echo session('show_modal') ? 'modal_open' : ''; ?>" data-type="sign-up">
-                <div class="modal__content js-modalWindow <?php echo session('show_modal') ? 'modal__content_open' : ''; ?>"><svg xmlns="https://www.w3.org/2000/svg" height="24px"
-                        aria-label="close icon" class="modal__close js-modalClose" viewBox="0 0 24 24" width="24px"
-                        fill="#FF0084">
+            <div class="modal js-modalOverlay <?php echo session('show_modal') ? 'modal_open' : ''; ?>"
+                data-type="sign-up">
+                <div
+                    class="modal__content js-modalWindow <?php echo session('show_modal') ? 'modal__content_open' : ''; ?>">
+                    <svg xmlns="https://www.w3.org/2000/svg" height="24px" aria-label="close icon"
+                        class="modal__close js-modalClose" viewBox="0 0 24 24" width="24px" fill="#FF0084">
                         <path d="M0 0h24v24H0z" fill="none"></path>
                         <path
                             d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
@@ -597,8 +623,7 @@
                         <?php echo cfrs_set(); ?>
                         <?php echo show_message(); ?>
                         <div class="modal__input">
-                            <input type="text" id="input-name" name="name" placeholder="Ваше имя"
-                                required="">
+                            <input type="text" id="input-name" name="name" placeholder="Ваше имя" required="">
                             <label class="modal__label" for="input-name"><span class="modal__label-border"><svg
                                         width="14" height="15" aria-label="name icon" viewBox="0 0 14 15" fill="none"
                                         xmlns="https://www.w3.org/2000/svg">
@@ -611,9 +636,14 @@
                             <input type="text" id="input-telegram" name="telegram" placeholder="Ваш логин телеграм"
                                 required="">
                             <label class="modal__label" for="input-telegram"><span class="modal__label-border"><svg
-                                        width="21" height="18" aria-label="telegram icon" viewBox="0 0 21 18" fill="none"
-                                        xmlns="https://www.w3.org/2000/svg">
-                                        <path d="M20.5888 0.327652C20.2525 0.0238033 19.7726 -0.081531 19.3338 0.0602651L0.868517 6.07647C0.368126 6.23852 0.0235951 6.68012 -0.00101432 7.20679C-0.0256237 7.72941 0.269689 8.20341 0.757775 8.41408L5.32281 10.3871C5.34332 10.4884 6.65582 16.4965 6.70094 16.699C6.75836 16.9624 6.89371 17.1933 7.17672 17.2662C7.46383 17.3391 7.66891 17.1811 7.88629 17.0231C8.00524 16.934 11.2742 14.5154 11.2742 14.5154L15.2363 17.7159C15.466 17.9023 15.749 17.9995 16.0361 17.9995C16.1714 17.9995 16.3109 17.9792 16.4463 17.9306C16.8646 17.7929 17.1722 17.4566 17.2748 17.0312L20.9662 1.53494C21.0687 1.0974 20.9252 0.635552 20.5888 0.327652ZM8.1816 11.5133C8.1775 11.5174 8.1775 11.5255 8.1734 11.5336L7.41051 14.171L6.56149 10.2655L12.4226 7.04879L8.32516 11.2784C8.25953 11.3472 8.21031 11.4283 8.1816 11.5133ZM8.4277 15.1028L8.77633 13.9036L9.10856 12.7571L10.298 13.7173L8.4277 15.1028ZM19.7644 1.25946L16.073 16.7557C16.073 16.7638 16.0689 16.776 16.0525 16.7801C16.0361 16.7841 16.0279 16.7801 16.0197 16.776L11.6843 13.2716L9.67457 11.647L16.1304 4.98262C16.3396 4.76384 16.3601 4.42759 16.1714 4.18856C15.9869 3.94953 15.6506 3.88066 15.3839 4.0265L5.82731 9.26891L1.25406 7.29592C1.24176 7.29187 1.23356 7.28782 1.23356 7.26351C1.23356 7.2392 1.24176 7.2392 1.25817 7.2311L19.7193 1.21894C19.7275 1.21489 19.7398 1.21084 19.7521 1.22704C19.7685 1.2392 19.7685 1.25135 19.7644 1.25946Z" fill="white"></path></g><defs><clipPath id="clip01">
+                                        width="21" height="18" aria-label="telegram icon" viewBox="0 0 21 18"
+                                        fill="none" xmlns="https://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20.5888 0.327652C20.2525 0.0238033 19.7726 -0.081531 19.3338 0.0602651L0.868517 6.07647C0.368126 6.23852 0.0235951 6.68012 -0.00101432 7.20679C-0.0256237 7.72941 0.269689 8.20341 0.757775 8.41408L5.32281 10.3871C5.34332 10.4884 6.65582 16.4965 6.70094 16.699C6.75836 16.9624 6.89371 17.1933 7.17672 17.2662C7.46383 17.3391 7.66891 17.1811 7.88629 17.0231C8.00524 16.934 11.2742 14.5154 11.2742 14.5154L15.2363 17.7159C15.466 17.9023 15.749 17.9995 16.0361 17.9995C16.1714 17.9995 16.3109 17.9792 16.4463 17.9306C16.8646 17.7929 17.1722 17.4566 17.2748 17.0312L20.9662 1.53494C21.0687 1.0974 20.9252 0.635552 20.5888 0.327652ZM8.1816 11.5133C8.1775 11.5174 8.1775 11.5255 8.1734 11.5336L7.41051 14.171L6.56149 10.2655L12.4226 7.04879L8.32516 11.2784C8.25953 11.3472 8.21031 11.4283 8.1816 11.5133ZM8.4277 15.1028L8.77633 13.9036L9.10856 12.7571L10.298 13.7173L8.4277 15.1028ZM19.7644 1.25946L16.073 16.7557C16.073 16.7638 16.0689 16.776 16.0525 16.7801C16.0361 16.7841 16.0279 16.7801 16.0197 16.776L11.6843 13.2716L9.67457 11.647L16.1304 4.98262C16.3396 4.76384 16.3601 4.42759 16.1714 4.18856C15.9869 3.94953 15.6506 3.88066 15.3839 4.0265L5.82731 9.26891L1.25406 7.29592C1.24176 7.29187 1.23356 7.28782 1.23356 7.26351C1.23356 7.2392 1.24176 7.2392 1.25817 7.2311L19.7193 1.21894C19.7275 1.21489 19.7398 1.21084 19.7521 1.22704C19.7685 1.2392 19.7685 1.25135 19.7644 1.25946Z"
+                                            fill="white"></path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip01">
                                     </svg></span></label>
                         </div>
                         <div class="modal__input"><input type="tel" id="input-phone" name="phone"
@@ -625,25 +655,25 @@
                                             d="M3.00781 6.48438C4.23177 8.90625 6.06771 10.7422 8.51562 11.9922L10.3516 10.1562C10.5859 9.89583 10.8724 9.83073 11.2109 9.96094C12.1484 10.2734 13.138 10.4297 14.1797 10.4297C14.388 10.4297 14.5703 10.5078 14.7266 10.6641C14.9089 10.8203 15 11.0156 15 11.25V14.1797C15 14.388 14.9089 14.5833 14.7266 14.7656C14.5703 14.9219 14.388 15 14.1797 15C11.6016 15 9.21875 14.375 7.03125 13.125C4.86979 11.849 3.15104 10.1302 1.875 7.96875C0.625 5.78125 0 3.39844 0 0.820312C0 0.611979 0.078125 0.429688 0.234375 0.273438C0.416667 0.0911458 0.611979 0 0.820312 0H3.75C3.98438 0 4.17969 0.0911458 4.33594 0.273438C4.49219 0.429688 4.57031 0.611979 4.57031 0.820312C4.57031 1.86198 4.72656 2.85156 5.03906 3.78906C5.14323 4.1276 5.07812 4.41406 4.84375 4.64844L3.00781 6.48438Z"
                                             fill="#FFFFFF"></path>
                                     </svg></span></label></div>
-                        
+
                         <div class="modal__input modal__input_checkbox">
-                            <input type="checkbox"
-                                class="js-privacyPolicyInput" id="input-privacy_policy" name="privacy_policy"
-                                value="true"> 
-                                <label class="modal__mark-label" for="input-privacy_policy"></label>
+                            <input type="checkbox" class="js-privacyPolicyInput" id="input-privacy_policy"
+                                name="privacy_policy" value="true">
+                            <label class="modal__mark-label" for="input-privacy_policy"></label>
                             <p class="modal__text-container js-privacyPolicyP"><span
                                     class="modal__text-container__text">Даю согласие
                                     на обработку персональных данных</span>
-                                </p>
+                            </p>
                         </div>
-                        <button class="modal__button modal__button_fill"
-                            data-text="Отправить заявку">Отправить заявку</button>
+                        <button class="modal__button modal__button_fill" data-text="Отправить заявку">Отправить
+                            заявку</button>
                     </form>
                 </div>
             </div>
 
-            <button class="button js-btnToModal modal-button-up js-buttonUp" data-type="sign-up" data-text="Стать моделью">Стать
-                        моделью</button>
+            <button class="button js-btnToModal modal-button-up js-buttonUp" data-type="sign-up"
+                data-text="Стать моделью">Стать
+                моделью</button>
         </main>
         <footer class="footer">
             <div class="footer__content">
@@ -658,13 +688,14 @@
                             Act
                             (DMCA) Соединенных Штатов Америки. Любое использование текстовых, фото, аудио и
                             видеоматериалов возможно только с согласием правообладателя.</p>
-                            <div class="footer__wr-copyright">
+                        <div class="footer__wr-copyright">
                             <a class="footer__dmca dmca-badge"
                                 href="https://www.dmca.com/Protection/Status.aspx?ID=8c97c871-687c-4d27-bbcb-020d55f03943&amp;refurl=https://grandmodels.online/?login"
                                 title="DMCA.com Protection Status"><img src="/view/assets/images/svg/dmca-protected.svg"
                                     alt="dmca logo"></a>
-                            <p class="footer__copyright">© <?php echo date('Y', time()); ?> FreeLifeStudio. Все права защищены</p>
-                    </div>
+                            <p class="footer__copyright">© <?php echo date('Y', time()); ?> FreeLifeStudio. Все права
+                                защищены</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -681,6 +712,10 @@
     <!-- <script src="/view/assets/js/slider-articles.js"></script> -->
     <script src="/view/assets/js/bg-loader.js"></script>
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7H2KQF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>
