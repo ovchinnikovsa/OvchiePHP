@@ -18,6 +18,7 @@ services:
       - 3306:3306
     volumes:
       - ./docker/mariadb/database:/var/lib/mysql
+      - ./docker/mariadb/dump:/home
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_DATABASE=blog_db
