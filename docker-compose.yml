@@ -5,29 +5,24 @@ services:
     build: ./docker/php
     volumes:
       - './source:/var/www/html'
+      - "./docker/conf/db.ini:/var/www/html/db.ini:rw"
     depends_on:
       - o_mariadb
 
   o_nginx:
     image: nginx:latest
     ports:
-      - 8083:80
+      - 8084:80
     volumes:
       - './source:/var/www/html'
       - './docker/nginx/conf.d:/etc/nginx/conf.d'
 
   o_mariadb:
-    image: mariadb:10.9
-    ports:
-      - 3310:3306
-    volumes:
-      - ./docker/mariadb/database:/var/lib/mysql
-      - ./docker/mariadb/dump:/home
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_DATABASE=blog_db
-      - MARIADB_PORT_NUMBER=3306
-      - MARIADB_ROOT_USER=root
-      - MARIADB_ROOT_PASSWORD=root
-      - MARIADB_USER=monty
-      - MARIADB_PASSWORD=monty
+      image: mariadb:10.9
+      ports:
+        - 3311:3306
+      volumes:
+        - ./docker/mariadb/database:/var/lib/mysql
+        - ./docker/mariadb/dump:/var/backups:rw
+      env_file:
+      - ./docker/conf/db.ini

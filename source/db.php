@@ -1,14 +1,15 @@
 <?php
 
-const USER = 'root';
-const PASS = 'root';
-const DBNAME = 'blog_db';
-const DSN = 'mysql:host=o_mariadb;dbname=' . DBNAME;
+$ini_file = parse_ini_file(__DIR__ . '/db.ini');
+
+$db_host = $ini_file['DB_HOST'];
+$db_name = $ini_file['MARIADB_DATABASE'];
+$db_user = $ini_file['MARIADB_USER'];
+$db_pass = $ini_file['MARIADB_PASSWORD'];
+$db_dns = 'mysql:host=' . $db_host . ';dbname=' . $db_name;
 
 try {
-    $pdo = new PDO(DSN, USER, PASS);
+    $pdo = new PDO($db_dns, $db_user, $db_pass);
 } catch (PDOException $e) {
-    echo '<pre>';
-    var_dump($e);
     die('Error, try again later');
 }
