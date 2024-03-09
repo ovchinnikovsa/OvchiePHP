@@ -1,6 +1,4 @@
-<?php 
-
-require './header.php';
+<?php require 'header.php';
 
 $quantity = 10;
 $limit = 2;

@@ -1,6 +1,6 @@
-# Simple E-commerce Website
+# Blog
 
-...
+Just dummy pet.
 
 ###  Requirements:
 * linux or win, under wsl

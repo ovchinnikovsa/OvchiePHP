@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(0);
+
 $ini_file = parse_ini_file(__DIR__ . '/db.ini');
 
 $db_host = $ini_file['DB_HOST'];
@@ -13,3 +15,5 @@ try {
 } catch (PDOException $e) {
     die('Error, try again later');
 }
+
+session_start();

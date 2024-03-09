@@ -1,13 +1,11 @@
-<?php
-require 'header.php';
+<?php 
+  require 'header.php';
 ?>
 
 <!-- REGISTRATION -->
 
-<?php
-if (!isset($_SESSION["email"]))
-{
-
+<?php 
+  if(!isset($_SESSION["email"])){    
 ?>
 
   <form class="reg-log" name="registration" action="registration.php" method="POST">
@@ -32,20 +30,16 @@ if (!isset($_SESSION["email"]))
 
 <?php
 
-  if (isset($_POST['email']))
-  {
+  if (isset($_POST['email'])) {
     $email = $_POST['email'];
-    if ($email == '')
-    {
-      unset($email);
+    if ($email == '') {
+        unset($email);
     }
   }
-  if (isset($_POST['password']))
-  {
+  if (isset($_POST['password'])) {
     $password = $_POST['password'];
-    if ($password == '')
-    {
-      unset($password);
+    if ($password == '') {
+        unset($password);
     }
   }
 
@@ -62,63 +56,51 @@ if (!isset($_SESSION["email"]))
   $checkDupl = $pdo->query($query);
   $checkDuplicationArray = $checkDupl->fetch();
 
-
-  if (isset($_POST['regButton']))
-  {
-    if ($email == '')
-    {
+ 
+  if (isset($_POST['regButton'])) {
+    if ($email == '') { 
       echo '<div class="form-text reg-errors">Введите почту!</div>';
+    } 
+    elseif ($password == '') {     
+      echo '<div class="form-text reg-errors">Введите пароль!</div>'; 
     }
-    elseif ($password == '')
-    {
-      echo '<div class="form-text reg-errors">Введите пароль!</div>';
-    }
-    elseif (empty($email) || empty($password))
-    {
+    elseif (empty($email) || empty($password)){  
       echo '<div class="form-text reg-errors">Заполните все поля!</div>';
     }
-    elseif (strlen($password) < 8)
-    {
-      echo '<div class="form-text reg-errors">Пароль должен быть минимум 8 символов!</div>';
+    elseif (strlen($password) < 8) {   
+      echo '<div class="form-text reg-errors">Пароль должен быть минимум 8 символов!</div>'; 
     }
-    elseif ($_POST['password_2'] != $password)
-    {
-      echo '<div class="form-text reg-errors">Пароли должны совпадать!</div>';
+    elseif ($_POST['password_2'] != $password) {      
+      echo '<div class="form-text reg-errors">Пароли должны совпадать!</div>';     
     }
-    elseif ($checkDuplicationArray['email'] === $email)
-    {
+    elseif ($checkDuplicationArray['email'] === $email){  
       echo '<div class="form-text reg-errors">Такой электронный адрес уже существует</div>';
     }
-    else
-    {
-      $pass_hash = password_hash($password, PASSWORD_DEFAULT);
+    else{
+      $pass_hash = password_hash($password, PASSWORD_DEFAULT); 
       $query = ("INSERT INTO users VALUES (NULL, :email, :password)");
       $checkDuplication = $pdo->prepare($query);
-      $checkDuplication->execute(['email' => $email, 'password' => $pass_hash]);
+      $checkDuplication->execute(['email' => $email, 'password' => $pass_hash]);      
       echo '<div class="form-text" class="reg-sucsess">Регистрация прошла успешно!<a href="logIn.php">Войти</a></div>';
       /* header_remove("Location");
-       header("HTTP/1.1 301 Moved Permanently");
-       header("Location: /logIn.php"); */
+      header("HTTP/1.1 301 Moved Permanently");
+      header("Location: /logIn.php"); */
       exit();
     }
   }
-
-
+  
 ?>
 
   </form>
 
-<?php
-}
-else
-{
-
+<?php 
+  }else{ 
 ?>
   <div id="authorized">
     <h1>Вы уже зарегестрированы </h1>
     <a href="index.php">Ладно</a>
   </div>
 <?php
-}
-require 'save_user.php';
+  }
+  require 'save_user.php';
 ?>

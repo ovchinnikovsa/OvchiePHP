@@ -15,10 +15,10 @@ build:
 	docker-compose build
 
 db_dump:
-	docker-compose exec mag_mariadb sh -c "exec mariadb-dump -u$(MARIADB_USER) -p$(MARIADB_PASSWORD) $(MARIADB_DATABASE) > /var/backups/db.sql"
+	docker-compose exec o_mariadb sh -c "exec mariadb-dump -u$(MARIADB_USER) -p$(MARIADB_PASSWORD) $(MARIADB_DATABASE) > /var/backups/db.sql"
 
 db_restore:
-	docker-compose exec -i mag_mariadb sh -c "exec mysql --user=$(MARIADB_USER) --password=$(MARIADB_PASSWORD) $(MARIADB_DATABASE) < /var/backups/db.sql"
+	docker-compose exec -i o_mariadb sh -c "exec mysql --user=$(MARIADB_USER) --password=$(MARIADB_PASSWORD) $(MARIADB_DATABASE) < /var/backups/db.sql"
 
 prod:
 	docker-compose -f docker-compose-prod.yml up -d
