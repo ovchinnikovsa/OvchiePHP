@@ -22,13 +22,19 @@ services:
       - titleSite
 
   o_mariadb:
-      image: mariadb:10.9
-      ports:
-        - 3311:3306
-      volumes:
-        - ./docker/mariadb/database:/var/lib/mysql
-        - ./docker/mariadb/dump:/var/backups:rw
-      env_file:
+    image: mariadb:10.9
+    ports:
+      - 3311:3306
+    volumes:
+      - ./docker/mariadb/database:/var/lib/mysql
+      - ./docker/mariadb/dump:/var/backups:rw
+    env_file:
       - ./docker/conf/db.ini
-      networks:
+    networks:
       - titleSite
+
+networks:
+  titleSite:
+    external: true
+    name: titleSite
+    driver: bridge
